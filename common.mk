@@ -68,7 +68,7 @@ debug: all
 	@echo "Press Ctrl-A and then X to exit QEMU"
 	@echo "------------------------------------"
 	${QEMU} ${QFLAGS} -kernel ${ELF} -S -s &
-	${GDB} ${ELF} -q -x ../gdbinit
+	${GDB} --tui ${ELF} -q -x ../gdbinit
 
 .PHONY : code # 反汇编
 code: all
